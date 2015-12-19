@@ -24,13 +24,4 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-WORKDIR /development
-RUN git clone --depth 500 https://github.com/apple/swift.git swift && \
-  git clone --depth 500 https://github.com/apple/swift-llvm.git llvm && \
-  git clone --depth 500 https://github.com/apple/swift-lldb.git lldb && \
-  git clone --depth 500 https://github.com/apple/swift-clang.git clang && \
-  git clone --depth 500 https://github.com/apple/swift-cmark.git cmark && \
-  git clone --depth 500 https://github.com/apple/swift-llbuild.git llbuild && \
-  git clone --depth 500 https://github.com/apple/swift-corelibs-xctest.git && \
-  git clone --depth 500 https://github.com/apple/swift-corelibs-foundation.git && \
-  git clone --depth 500 https://github.com/apple/swift-package-manager.git swiftpm
+WORKDIR /swift-development
