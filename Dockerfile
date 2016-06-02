@@ -7,6 +7,8 @@ RUN apt-get update && \
       cmake \
       git \
       icu-devtools \
+      autoconf \
+      libtool \
       libbsd-dev \
       libedit-dev \
       libicu-dev \
@@ -18,6 +20,8 @@ RUN apt-get update && \
       pkg-config \
       swig \
       uuid-dev \
+      libkqueue-dev \
+      libblocksruntime-dev \
       && \
     update-alternatives --install /usr/bin/clang clang /usr/bin/clang-3.6 100 && \
     update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-3.6 100 && \
